@@ -37,3 +37,16 @@ else:
     message = "🔴Product not available."
 
 print(message)
+
+
+# Multiple assignment
+user_name, user_email, user_is_connected, user_session = "Jack Ma", "jackma@gmail.com", True, "Offline"
+
+if user_is_connected:
+    user_session = "Online"
+    print(f"User with name = '{user_name}' and email = '{user_email}' is connected.")
+
+    if user_session is not None:
+        print(f"You can edit your profile page.")
+else:
+    print(f"User with name = '{user_name}' is not connected.")
