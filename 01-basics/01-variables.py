@@ -53,7 +53,7 @@ else:
 
 # Casting
 # List of car products with brand and price
-cars: list[dict[str, str | float]] = [
+cars: list[dict[str, str | int]] = [
     {"brand": "Toyota", "model": "Corolla", "price": 20000, "currency": "EURO"},
     {"brand": "Honda", "model": "Civic", "price": 22000, "currency": "DOLLAR"},
     {"brand": "Ford", "model": "Focus", "price": 21000, "currency": "EURO"},
@@ -67,7 +67,7 @@ cars: list[dict[str, str | float]] = [
 ]
 
 
-def convert_euro_to_dollar(product: dict[str, str | float]) -> dict[str, str | float]:
+def convert_euro_to_dollar(product: dict[str, str | int]) -> dict[str, str | int]:
     """
     Converts the price of a product from euros to dollars if its currency is 'EURO'.
 
@@ -90,7 +90,7 @@ def convert_euro_to_dollar(product: dict[str, str | float]) -> dict[str, str | f
     return product
 
 
-def total_price(products: list[dict[str, str | float]]) -> float:
+def total_price(products: list[dict[str, str | int]]) -> float:
     """
     Calculates the total price of a list of products.
 
@@ -104,7 +104,7 @@ def total_price(products: list[dict[str, str | float]]) -> float:
     Returns:
         float: The total price of all products in the list.
     """
-    converted_products: list[dict[str, str | float]] = [convert_euro_to_dollar(product) for product in products]
+    converted_products: list[dict[str, str | int]] = [convert_euro_to_dollar(product) for product in products]
     return float(sum(product['price'] for product in converted_products))
 
 
