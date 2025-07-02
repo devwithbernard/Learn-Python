@@ -94,3 +94,11 @@ def display_key_value(data: dict[str, str | int], indent: int = 0):
             print(f"{prefix}{key} => {value}")
 
 display_key_value(user)
+
+# Set Types
+fruits: set[str] = {"Banana", "Cherry", "Pineapple", "Apple"}
+
+print("Set type: ", type(fruits), fruits)
+
+for fruit in fruits:
+    print(fruit)
