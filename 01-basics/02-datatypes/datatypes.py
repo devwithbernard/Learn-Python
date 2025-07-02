@@ -36,7 +36,6 @@ if isinstance(names, list):
     for index, name in enumerate(names):
         print(f"{index} => {name}")
 
-
 # Tuple
 persons: list[tuple[str, int]] = [('Mario', 28,), ('Luigi', 15,), ('John Doe', 47,)]
 
@@ -59,27 +58,28 @@ for number in numbers:
 # Mapping
 
 user: dict[str, str | int] = {"id": 1,
-    "name": "Leanne Graham",
-    "username": "Bret",
-    "email": "Sincere@april.biz",
-    "address": {
-      "street": "Kulas Light",
-      "suite": "Apt. 556",
-      "city": "Gwenborough",
-      "zipcode": "92998-3874",
-      "geo": {
-        "lat": "-37.3159",
-        "lng": "81.1496"
-      }
-    },
-    "phone": "1-770-736-8031 x56442",
-    "website": "hildegard.org",
-    "company": {
-      "name": "Romaguera-Crona",
-      "catchPhrase": "Multi-layered client-server neural-net",
-      "bs": "harness real-time e-markets"
-    }
-  }
+                              "name": "Leanne Graham",
+                              "username": "Bret",
+                              "email": "Sincere@april.biz",
+                              "address": {
+                                  "street": "Kulas Light",
+                                  "suite": "Apt. 556",
+                                  "city": "Gwenborough",
+                                  "zipcode": "92998-3874",
+                                  "geo": {
+                                      "lat": "-37.3159",
+                                      "lng": "81.1496"
+                                  }
+                              },
+                              "phone": "1-770-736-8031 x56442",
+                              "website": "hildegard.org",
+                              "company": {
+                                  "name": "Romaguera-Crona",
+                                  "catchPhrase": "Multi-layered client-server neural-net",
+                                  "bs": "harness real-time e-markets"
+                              }
+                              }
+
 
 # print properties and values recursively
 
@@ -89,9 +89,10 @@ def display_key_value(data: dict[str, str | int], indent: int = 0):
 
         if isinstance(value, dict):
             print(f"{prefix}[{key}]:")
-            return display_key_value(value, indent= indent + 1)
+            return display_key_value(value, indent=indent + 1)
         else:
             print(f"{prefix}{key} => {value}")
+
 
 display_key_value(user)
 
