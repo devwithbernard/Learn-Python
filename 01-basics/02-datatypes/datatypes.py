@@ -103,3 +103,12 @@ print("Set type: ", type(fruits), fruits)
 
 for fruit in fruits:
     print(fruit)
+
+
+# Boolean Type
+is_connected: bool = False
+
+if is_connected:
+    print("User is connected.")
+else:
+    print("User is not connected.")
