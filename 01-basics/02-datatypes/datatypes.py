@@ -112,3 +112,11 @@ if is_connected:
     print("User is connected.")
 else:
     print("User is not connected.")
+
+# NoneType
+data = None
+
+if data is not None:
+    print(data)
+else:
+    print("Data is empty.")
